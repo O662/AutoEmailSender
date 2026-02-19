@@ -201,7 +201,6 @@ All settings go in `.env`:
 
 
 
-tldr:
-
-in termanal 1: python tracker.py
-in termanal 2: python sender.py "Hey, Just following up about the new website!"
+## TLDR:
+- In termanal 1: python tracker.py
+- In termanal 2: python sender.py "Hey, Just following up about the new website!"
