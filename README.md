@@ -201,7 +201,7 @@ All settings go in `.env`:
 
 
 
-Notes:
+tldr:
 
 in termanal 1: python tracker.py
 in termanal 2: python sender.py "Hey, Just following up about the new website!"
