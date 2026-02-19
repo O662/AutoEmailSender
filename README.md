@@ -203,4 +203,4 @@ All settings go in `.env`:
 
 ## TLDR:
 - In termanal 1: python tracker.py
-- In termanal 2: python sender.py "Hey, Just following up about the new website!"
+- In termanal 2: python sender.py "Subject line of a lifetime!"
