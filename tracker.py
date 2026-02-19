@@ -6,8 +6,24 @@ import urllib.parse
 from flask import Flask, request, redirect, Response, render_template_string
 from config import Config
 from database import init_db, record_event, get_tracking_summary, get_events_for_email
+import os
+
+DASHBOARD_ENABLED = os.getenv("DASHBOARD_ENABLED", "false").lower() == "true"
+
+if DASHBOARD_ENABLED:
+    @app.route("/")
+    def dashboard():
+        summary = get_tracking_summary()
+        return render_template_string(DASHBOARD_TEMPLATE, summary=summary)
+
+    @app.route("/detail/<email_id>")
+    def email_detail(email_id):
+        ...
 
 app = Flask(__name__)
+
+# Initialize database on import (so gunicorn/wsgi also runs it)
+init_db()
 
 # 1x1 transparent GIF (43 bytes)
 TRACKING_PIXEL = base64.b64decode(

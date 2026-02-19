@@ -198,3 +198,10 @@ All settings go in `.env`:
 - **Click tracking** is reliable since it requires an actual HTTP redirect
 - Sending speed depends on your SMTP provider's rate limits — adjust `DELAY_BETWEEN_EMAILS` accordingly
 - For high-volume sending, consider using a transactional email API (SendGrid, Mailgun) instead of raw SMTP
+
+
+
+Notes:
+
+in termanal 1: python tracker.py
+in termanal 2: python sender.py "Hey, Just following up about the new website!"
