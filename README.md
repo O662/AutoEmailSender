@@ -199,7 +199,7 @@ All settings go in `.env`:
 - Sending speed depends on your SMTP provider's rate limits — adjust `DELAY_BETWEEN_EMAILS` accordingly
 - For high-volume sending, consider using a transactional email API (SendGrid, Mailgun) instead of raw SMTP
 
-
+---
 
 ## TLDR:
 - In termanal 1: python tracker.py
